@@ -19,7 +19,7 @@ public class GameController : MonoBehaviour
 
 			UnityEngine.SceneManagement.SceneManager.LoadScene
 			(
-				"Main",
+				"Map_v1",
 				UnityEngine.SceneManagement.LoadSceneMode.Single
 			);
 		}
