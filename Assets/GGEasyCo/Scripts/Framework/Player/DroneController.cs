@@ -76,12 +76,11 @@ public class DroneController : MonoBehaviour
 		// Move vertically by adjusting gravity.
 		refBody.AddForce(Vector3.up * (VerticalThrust * verticalInput), ForceMode.Acceleration);
 
-
 		// Tilt move ------------------------------------------------------------------------------
 		leftStickInput.x = Input.GetAxis("Drone Leftstick Horizontal");
 		leftStickInput.y = Input.GetAxis("Drone Leftstick Vertical");
 
-		refBody.AddForce(Vector3.forward * (MoveThrust * leftStickInput.y), ForceMode.Acceleration);
-		refBody.AddForce(Vector3.right * (MoveThrust * leftStickInput.x), ForceMode.Acceleration);
+		refBody.AddForce(transform.forward * (MoveThrust * leftStickInput.y), ForceMode.Acceleration);
+		refBody.AddForce(transform.right * (MoveThrust * leftStickInput.x), ForceMode.Acceleration);
 	}
 }
