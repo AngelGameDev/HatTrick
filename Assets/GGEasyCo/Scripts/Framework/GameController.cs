@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+	private void Awake()
+	{
+		PathPoint.ClearPoints();
+		NPC.hatless = 0;
+	}
+
 	private void Update()
 	{
 		if (Input.GetKeyDown(KeyCode.Escape))
@@ -15,8 +21,6 @@ public class GameController : MonoBehaviour
 
 		if (Input.GetKeyDown(KeyCode.Backspace))
 		{
-			PathPoint.ClearPoints();
-
 			Debug.Log("Restarting by keyboard input.");
 
 			UnityEngine.SceneManagement.SceneManager.LoadScene

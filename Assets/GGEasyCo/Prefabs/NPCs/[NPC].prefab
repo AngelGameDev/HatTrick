@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 493349999}
   m_Layer: 0
   m_Name: '[NPC]'
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -183,3 +183,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4b7f1e4d43f10a41bf1c69d781829e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hatSlot: {fileID: 0}
+  hats:
+  - {fileID: 5013421735583257546, guid: 4d3193ca977b34d4fbbc0388789dba62, type: 3}
+  - {fileID: 8324077189985633379, guid: e80f2f6b59144ee44afd586f9d0b5241, type: 3}
+  - {fileID: 3529372721057125481, guid: 1cdd74b7d6f2cd948b8f43bf89f8a2af, type: 3}
+  - {fileID: 5918267599683992717, guid: 166d0ef7c9f8ca4488fd5d0b91352a11, type: 3}
+  - {fileID: 7345639576864932584, guid: b48b34efc19b03346b92503df1a04eb3, type: 3}
+  hasHat: 1
