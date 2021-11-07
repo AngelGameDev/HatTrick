@@ -5,8 +5,13 @@ using UnityEngine;
 public class Car : MonoBehaviour
 {
     public BezierSolution.BezierSpline spline;
+	public Rigidbody refBody;
 
 	public List<GameObject> cars;
+
+	public float initialPause;
+
+	private float secondaryPause;
 
 	public float speed;
 
@@ -16,17 +21,43 @@ public class Car : MonoBehaviour
 
 	[HideInInspector]
 	public bool CanMove;
+	[HideInInspector]
+	public bool InDock;
+
+	private bool isPaused = true;
 
 	private void Start()
 	{
 		RandomizeLook();
+
+		InDock = true;
+		refBody.isKinematic = true;
+		Invoke("EndPause", initialPause);
+	}
+
+	private void EndPause()
+	{
+		isPaused = false;
+		refBody.isKinematic = false;
 	}
 
 	private void Update()
 	{
+		if (isPaused)
+		{
+			return;
+		}
+
+		if (progress < 0.05f)
+		{
+			CanMove = true;
+			InDock = true;
+		}
+
+		InDock = false;
+			
 		if (!CanMove)
 		{
-			Debug.Log("Cant");
 			return;
 		}
 
@@ -35,11 +66,13 @@ public class Car : MonoBehaviour
 		if (progress > 1)
 		{
 			progress = 0f;
+
+			RandomizeLook();
 		}
 
 		// Move.
 		transform.position = spline.GetPoint(spline.evenlySpacedPoints.GetNormalizedTAtPercentage(progress));
-		transform.LookAt(transform.position + spline.GetTangent(spline.evenlySpacedPoints.GetNormalizedTAtPercentage(progress)));
+		transform.LookAt(transform.position - spline.GetTangent(spline.evenlySpacedPoints.GetNormalizedTAtPercentage(progress)));
 	}
 
 	public void RandomizeLook()
