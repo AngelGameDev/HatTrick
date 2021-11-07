@@ -15,6 +15,8 @@ public class GameController : MonoBehaviour
 
 		if (Input.GetKeyDown(KeyCode.Backspace))
 		{
+			PathPoint.ClearPoints();
+
 			Debug.Log("Restarting by keyboard input.");
 
 			UnityEngine.SceneManagement.SceneManager.LoadScene
