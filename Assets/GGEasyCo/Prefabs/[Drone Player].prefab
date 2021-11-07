@@ -66,7 +66,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2932898413527861621}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.193, z: 0}
+  m_LocalPosition: {x: 0, y: 0.068, z: 0}
   m_LocalScale: {x: 0.55806, y: 0.55806, z: 0.55806}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -176,7 +176,7 @@ Transform:
   m_GameObject: {fileID: 4540506324219431945}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2386, y: 1.2386, z: 1.2386}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7898863812015984665}
@@ -375,7 +375,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6457668352000454963}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.15, z: 0.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -405,15 +405,15 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.32
+  near clip plane: 0.2
   far clip plane: 1000
-  field of view: 60
+  field of view: 80
   orthographic: 0
   orthographic size: 5
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 183
+    m_Bits: 1719
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -448,11 +448,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 982878628894959171, guid: 7cc4129e2471bda4ababa60d6163a93c, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.150852
+      value: 1.08744
+      objectReference: {fileID: 0}
+    - target: {fileID: 982878628894959171, guid: 7cc4129e2471bda4ababa60d6163a93c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0009
+      objectReference: {fileID: 0}
+    - target: {fileID: 982878628894959171, guid: 7cc4129e2471bda4ababa60d6163a93c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.025
       objectReference: {fileID: 0}
     - target: {fileID: 982878628894959171, guid: 7cc4129e2471bda4ababa60d6163a93c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.0316
+      value: -0.0637
       objectReference: {fileID: 0}
     - target: {fileID: 5059497643697710558, guid: 7cc4129e2471bda4ababa60d6163a93c, type: 3}
       propertyPath: m_RootOrder
@@ -586,15 +594,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2708182068536991316, guid: 57060734f5f956a468320e6ac947f823, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -2520971884889791657, guid: 57060734f5f956a468320e6ac947f823, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -1135646606214911199, guid: 57060734f5f956a468320e6ac947f823, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 156862778449027376, guid: 57060734f5f956a468320e6ac947f823, type: 3}
       propertyPath: m_Layer
@@ -610,7 +618,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2290500007174413895, guid: 57060734f5f956a468320e6ac947f823, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6326135749827134532, guid: 57060734f5f956a468320e6ac947f823, type: 3}
       propertyPath: m_Layer
@@ -618,11 +626,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6960838890428242193, guid: 57060734f5f956a468320e6ac947f823, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7716157963417745793, guid: 57060734f5f956a468320e6ac947f823, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57060734f5f956a468320e6ac947f823, type: 3}
