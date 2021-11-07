@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.AI;
 
 public class NPC : MonoBehaviour
 {
 	public Transform hatSlot;
+	public SpriteRenderer headBorder;
 
 	public static int hatless;
 
@@ -22,6 +24,8 @@ public class NPC : MonoBehaviour
 
 	private void Start()
 	{
+		headBorder.color = Color.red;
+
 		refAgent = GetComponent<NavMeshAgent>();
 
 		if (hasHat)
@@ -68,6 +72,7 @@ public class NPC : MonoBehaviour
 		GameObject hat = GameObject.Instantiate<GameObject>(hats[index], hatSlot);
 
 		hasHat = true;
+		headBorder.color = Color.white;
 	}
 
 	public void PutOnHat(GameObject Hat)
@@ -75,5 +80,6 @@ public class NPC : MonoBehaviour
 		GameObject hat = GameObject.Instantiate<GameObject>(Hat, hatSlot);
 		hatless--;
 		hasHat = true;
+		headBorder.color = Color.white;
 	}
 }

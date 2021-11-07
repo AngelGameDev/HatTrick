@@ -12445,9 +12445,25 @@ PrefabInstance:
       propertyPath: hasHat
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2011167491077906249, guid: 2035f53f886714a4592d1671adc80e49, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4828864078427198218, guid: 2035f53f886714a4592d1671adc80e49, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4971835690584671235, guid: 2035f53f886714a4592d1671adc80e49, type: 3}
       propertyPath: m_Name
       value: '[NPC 3] (5)'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5956595960950470113, guid: 2035f53f886714a4592d1671adc80e49, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9080013901863154739, guid: 2035f53f886714a4592d1671adc80e49, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2035f53f886714a4592d1671adc80e49, type: 3}

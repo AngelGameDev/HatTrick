@@ -5,6 +5,9 @@ using UnityEngine;
 public class DroneController : MonoBehaviour
 {
 	public Transform CamTransform;
+
+	public static Transform DroneCam;
+
 	public float MinAngle;
 	public float MaxAngle;
 
@@ -24,6 +27,8 @@ public class DroneController : MonoBehaviour
 	{
 		refBody = GetComponent<Rigidbody>();
 		refBody.useGravity = false;
+
+		DroneCam = CamTransform;
 	}
 
 	private void Update()
