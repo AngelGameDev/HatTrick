@@ -16,8 +16,8 @@ TagManager:
   - PlayerPhysics
   - PlayerHands
   - Environment
-  - 
-  - 
+  - Vehicle
+  - NPC
   - 
   - 
   - 
