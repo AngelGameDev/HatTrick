@@ -7,6 +7,11 @@ public class VRPlayerController : MonoBehaviour
 	public Transform LeftHandTransform;
 	public Transform RightHandTransform;
 
+	public AudioClip hatThrowClip;
+
+	public AudioSource sourceLeft;
+	public AudioSource sourceRight;
+
 	public float ThrowForce;
 
 	public List<GameObject> hats = new List<GameObject>(); 
@@ -52,6 +57,10 @@ public class VRPlayerController : MonoBehaviour
 			return;
 		}
 
+		sourceLeft.Stop();
+		sourceLeft.clip = hatThrowClip;
+		sourceLeft.Play();
+
 		int index = Random.Range(0, hats.Count);
 
 		GameObject newHat = GameObject.Instantiate<GameObject>(hats[index], LeftHandTransform);
@@ -63,7 +72,7 @@ public class VRPlayerController : MonoBehaviour
 
 		hatBody.AddForce(LeftHandTransform.forward * ThrowForce, ForceMode.Impulse);
 
-		throwTimer = 0.5f;
+		throwTimer = 0.45f;
 	}
 
 	public void ThrowRight()
@@ -72,6 +81,10 @@ public class VRPlayerController : MonoBehaviour
 		{
 			return;
 		}
+
+		sourceRight.Stop();
+		sourceRight.clip = hatThrowClip;
+		sourceRight.Play();
 
 		int index = Random.Range(0, hats.Count);
 
@@ -87,6 +100,6 @@ public class VRPlayerController : MonoBehaviour
 		hatBody.AddTorque(Vector3.right * Random.Range(0.5f, 5f), ForceMode.Impulse);
 		hatBody.AddTorque(Vector3.up * Random.Range(0.5f, 5f), ForceMode.Impulse);
 
-		throwTimer = 0.5f;
+		throwTimer = 0.45f;
 	}
 }

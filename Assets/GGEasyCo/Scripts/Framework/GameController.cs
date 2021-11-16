@@ -4,10 +4,28 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+	public AudioSource audioSource;
+	public AudioClip musicStart;
+	public AudioClip musicLoop;
+
 	private void Awake()
 	{
 		PathPoint.ClearPoints();
 		NPC.hatless = 0;
+	}
+
+	private void Start()
+	{
+		audioSource.clip = musicStart;
+		audioSource.Play();
+	}
+
+	private void StartMusicLoop()
+	{
+		audioSource.Stop();
+		audioSource.clip = musicLoop;
+		audioSource.loop = true;
+		audioSource.Play();
 	}
 
 	private void Update()

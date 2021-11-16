@@ -16,6 +16,8 @@ public class DroneController : MonoBehaviour
 	public float TurnSpeed;
 	public float TiltSpeed;
 
+	public GameObject GUIBase;
+	public static GameObject GUIRef;
 
 	private Rigidbody refBody;
 
@@ -23,22 +25,21 @@ public class DroneController : MonoBehaviour
 	private Vector2 rightStickInput;
 	private float verticalInput;
 
-	private void Start()
+	private void Awake()
 	{
 		refBody = GetComponent<Rigidbody>();
 		refBody.useGravity = false;
 
 		DroneCam = CamTransform;
+
+		GUIRef = GUIBase;
 	}
 
 	private void Update()
 	{
-
 		// Rotate ----------------------------------------------------------------------------
 		rightStickInput.x = 
-			Input.GetAxis("Drone Rightstick Horizontal") - 
-			Input.GetAxis("Drone Vertical Movement Up Trigger") + 
-			Input.GetAxis("Drone Vertical Movement Down Trigger");
+			Input.GetAxis("Drone Rightstick Horizontal");
 
 		transform.Rotate(Vector3.up, TurnSpeed * Time.deltaTime * rightStickInput.x);
 
@@ -69,8 +70,8 @@ public class DroneController : MonoBehaviour
 
 		// Create vertical input from triggers.
 		verticalInput = 
-			Input.GetAxis("Drone Vertical Movement Up Trigger") - 
-			Input.GetAxis("Drone Vertical Movement Down Trigger");
+			Input.GetAxis("Drone Vertical Movement Up Trigger");// - 
+			//Input.GetAxis("Drone Vertical Movement Down Trigger");
 
 		// Add in dpad.
 		verticalInput = Mathf.Clamp
